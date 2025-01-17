@@ -1,0 +1,26 @@
+{
+  "name": "SweetSFSymbols",
+  "version": "0.7.2",
+  "summary": "SF Symbols brought to you by Expo's Module API",
+  "description": "SF Symbols brought to you by Expo's Module API",
+  "license": "MIT",
+  "authors": "Andrew <alevy97@gmail.com> (https://github.com/andrew-levy)",
+  "homepage": "https://github.com/andrew-levy/sweet-sfsymbols#readme",
+  "platforms": {
+    "ios": "13.0"
+  },
+  "swift_versions": "5.4",
+  "source": {
+    "git": "https://github.com/andrew-levy/sweet-sfsymbols"
+  },
+  "static_framework": true,
+  "dependencies": {
+    "ExpoModulesCore": []
+  },
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES",
+    "SWIFT_COMPILATION_MODE": "wholemodule"
+  },
+  "source_files": "**/*.{h,m,swift}",
+  "swift_version": "5.4"
+}

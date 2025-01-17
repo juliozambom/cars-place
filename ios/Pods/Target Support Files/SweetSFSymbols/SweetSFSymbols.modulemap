@@ -1,0 +1,6 @@
+module SweetSFSymbols {
+  umbrella header "SweetSFSymbols-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -4,9 +4,11 @@ const { hairlineWidth, platformSelect } = require('nativewind/theme');
 module.exports = {
   // NOTE: Update this to include the paths to all of your component files.
   content: [
-    './src/app/**/*.{js,jsx,ts,tsx}',
-    './src/app/*.{js,jsx,ts,tsx}',
-    './src/shared/**/*.{js,jsx,ts,tsx}',
+    './*.{js,jsx,ts,tsx}',
+    './src/components/**/*.{js,jsx,ts,tsx}',
+    './src/components/*.{js,jsx,ts,tsx}',
+    './src/screens/**/*.{js,jsx,ts,tsx}',
+    './src/screens/*.{js,jsx,ts,tsx}',
   ],
   presets: [require('nativewind/preset')],
   theme: {
