@@ -1,19 +1,20 @@
-### O que este boilerplate oferece?
+### Cars Place
 
-Este boilerplate foi criado utilizando as tecnologias mais recentes e práticas consolidadas:
+Uma aplicação onde o usuário realiza o login e pode começar a navegar entre marcas e modelos de variados carros.
 
 - **React Native (0.76.6)** e **Expo** para desenvolvimento mobile.
 - **NativeWind** e **NativeWindUI** para estilização eficiente e moderna.
 - **Prettier**, **ESLint** e **Husky** para garantir qualidade de código e padronização de commits.
+- **React Navigation** para estruturação da navegação entre telas.
 
 ### Principais recursos:
 
-- **Regras bem definidas** de código e commits: impossibilita commits fora dos padrões configurados.
-- **Tema claro e escuro pré-definido** que pode ser facilmente customizado. Já inclui um hook para consumir o tema, facilitando sua implementação no projeto.
-- **Pronto para uso**: basta clonar, instalar as dependências e colocar sua ideia em prática.
+- **Listagem de marcas de carros** na tela inicial, onde o usuário pode selecionar a marca que desejar
+- **Listagem de modelos das marcas** que pode ser acessada selecionando qualquer marca na home
 
-### Por que usar?
+### Screenshots:
 
-Este boilerplate foi pensado para economizar seu tempo, deixando você focado no que realmente importa: criar seu produto. Não é apenas um ponto de partida, mas também uma base que promove boas práticas desde o início.
 
-Estou aberto a sugestões e feedbacks! Ainda há funcionalidades que planejo adicionar, mas acredito que esta versão já será útil para muitos.
+![simulator_screenshot_E664967B-01E7-4716-9D20-2EE1D0396294](https://github.com/user-attachments/assets/5a9d2414-96d4-4189-924c-0149b722159a)
+![simulator_screenshot_CBCC199A-0F5A-45EE-B545-B30CF4BB469D](https://github.com/user-attachments/assets/6130d382-9277-4ce1-b7a5-c02e1a872a45)
+![simulator_screenshot_92357798-E566-4E71-A8F8-AB4CC511136B](https://github.com/user-attachments/assets/c516a2ce-463e-4ab9-8a83-f798e915491d)
