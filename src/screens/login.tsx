@@ -69,7 +69,7 @@ export default function Login() {
         <View className="bg-white p-6 rounded-lg shadow-md">
           <TextInput
             className="border-b border-gray-300 py-2 px-4 mb-4"
-            placeholder="user"
+            placeholder="Nome de usuário"
             value={user}
             onChangeText={setUser}
             autoCapitalize="none"
@@ -77,7 +77,7 @@ export default function Login() {
 
           <TextInput
             className="border-b border-gray-300 py-2 px-4 mb-6"
-            placeholder="Password"
+            placeholder="Senha"
             value={password}
             onChangeText={setPassword}
             secureTextEntry
