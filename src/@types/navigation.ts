@@ -1,7 +1,7 @@
 import { NavigationProp } from '@react-navigation/native';
 
 export type RootStackParamList = {
-  Home: {};
+  Home: undefined;
   Model: {
     brandId: number;
     name: string;
