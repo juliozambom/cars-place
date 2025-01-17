@@ -1,14 +1,16 @@
-import Login from './src/screens/login';
-import './global.css';
+import { NavigationContainer } from '@react-navigation/native';
 import { AuthContextProvider } from './src/contexts/auth-context';
-import HomeScreen from './src/screens/home';
-import Model from './src/screens/model';
+import { Routes } from './src/routes';
+
+import './global.css';
 
 const App = () => {
   return (
-    <AuthContextProvider>
-      <Model />
-    </AuthContextProvider>
+    <NavigationContainer>
+      <AuthContextProvider>
+        <Routes />
+      </AuthContextProvider>
+    </NavigationContainer>
   );
 };
 

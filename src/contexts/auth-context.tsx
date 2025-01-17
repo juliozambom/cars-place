@@ -17,6 +17,7 @@ interface UserProps {
 interface AuthContextProps {
   user: UserProps;
   refreshUser: () => Promise<void>;
+  signOut: () => Promise<void>;
   isSigned: boolean;
 }
 
@@ -34,6 +35,11 @@ export const AuthContextProvider = ({ children }: PropsWithChildren) => {
     }
   }
 
+  async function signOut() {
+    await AsyncStorage.removeItem(AsyncStorageUserKey);
+    await refreshUser();
+  }
+
   useEffect(() => {
     refreshUser();
   }, []);
@@ -43,6 +49,7 @@ export const AuthContextProvider = ({ children }: PropsWithChildren) => {
       value={{
         user,
         refreshUser,
+        signOut,
         isSigned: !!user?.id,
       }}
     >

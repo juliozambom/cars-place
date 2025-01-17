@@ -1,19 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import {
-  View,
-  Text,
-  FlatList,
-  TouchableOpacity,
-  Alert,
-  SafeAreaView,
-} from 'react-native';
+import { View, Text, FlatList, Alert, SafeAreaView } from 'react-native';
 import { ListBrandsService } from '../services/api/cars/list-brands';
 import { useAuth } from '../contexts/auth-context';
 import { BrandItem, CarBrand } from '../components/brand-item';
 import { Button } from '../components/nativewindui/Button';
 
 export default function Home() {
-  const { user } = useAuth();
+  const { user, signOut } = useAuth();
   const [carBrands, setCarBrands] = useState<CarBrand[]>([]);
 
   const fetchCarBrands = async () => {
@@ -26,6 +19,7 @@ export default function Home() {
 
   const handleLogout = () => {
     Alert.alert('Você está saindo do app.', 'Volte sempre!');
+    signOut();
   };
 
   useEffect(() => {
