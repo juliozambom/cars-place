@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { ListBrandsService } from '../services/api/cars/list-brands';
 import { useAuth } from '../contexts/auth-context';
-import { BrandItem } from '../components/brand-item';
+import { BrandItem, CarBrand } from '../components/brand-item';
 
 export default function Home() {
   const { user } = useAuth();

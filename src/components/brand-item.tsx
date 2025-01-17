@@ -1,5 +1,5 @@
 import { Text, View } from 'react-native';
-interface CarBrand {
+export interface CarBrand {
   codigo: string;
   nome: string;
 }
