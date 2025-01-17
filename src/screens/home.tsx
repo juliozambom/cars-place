@@ -10,6 +10,7 @@ import {
 import { ListBrandsService } from '../services/api/cars/list-brands';
 import { useAuth } from '../contexts/auth-context';
 import { BrandItem, CarBrand } from '../components/brand-item';
+import { Button } from '../components/nativewindui/Button';
 
 export default function Home() {
   const { user } = useAuth();
@@ -24,7 +25,7 @@ export default function Home() {
   };
 
   const handleLogout = () => {
-    Alert.alert('Logout', 'You have been logged out.');
+    Alert.alert('Você está saindo do app.', 'Volte sempre!');
   };
 
   useEffect(() => {
@@ -35,12 +36,9 @@ export default function Home() {
     <SafeAreaView className="flex-1 bg-blue-500">
       <View className="flex-row justify-between items-center p-4 bg-blue-500">
         <Text className="text-xl font-bold text-white">Olá, {user.name}!</Text>
-        <TouchableOpacity
-          onPress={handleLogout}
-          className="bg-red-500 px-4 py-2 rounded-lg"
-        >
-          <Text className="text-white font-semibold">Logout</Text>
-        </TouchableOpacity>
+        <Button onPress={handleLogout} className="bg-red-500 rounded-lg">
+          <Text className="text-white font-semibold my-0.5 mx-6">Sair</Text>
+        </Button>
       </View>
 
       <FlatList
