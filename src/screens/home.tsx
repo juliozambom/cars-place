@@ -9,11 +9,7 @@ import {
 } from 'react-native';
 import { ListBrandsService } from '../services/api/cars/list-brands';
 import { useAuth } from '../contexts/auth-context';
-
-interface CarBrand {
-  codigo: string;
-  nome: string;
-}
+import { BrandItem } from '../components/brand-item';
 
 export default function Home() {
   const { user } = useAuth();
@@ -30,13 +26,6 @@ export default function Home() {
   const handleLogout = () => {
     Alert.alert('Logout', 'You have been logged out.');
   };
-
-  const renderCarBrand = ({ item }: { item: CarBrand }) => (
-    <View className="p-4 border-b border-gray-200">
-      <Text className="text-lg">{item.nome}</Text>
-      <Text className="text-sm text-gray-500">Código: {item.codigo}</Text>
-    </View>
-  );
 
   useEffect(() => {
     fetchCarBrands();
@@ -56,7 +45,7 @@ export default function Home() {
 
       <FlatList
         data={carBrands}
-        renderItem={renderCarBrand}
+        renderItem={({ item }) => <BrandItem item={item} />}
         keyExtractor={(item) => item.codigo}
         className="bg-gray-100"
         ListHeaderComponent={
