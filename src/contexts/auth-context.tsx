@@ -32,6 +32,8 @@ export const AuthContextProvider = ({ children }: PropsWithChildren) => {
 
     if (userFromAsyncStorage) {
       setUser(JSON.parse(userFromAsyncStorage) as UserProps);
+    } else {
+      setUser({} as UserProps);
     }
   }
 
