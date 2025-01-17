@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, FlatList, Alert, SafeAreaView } from 'react-native';
+import { View, Text, FlatList, SafeAreaView } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 import { Button } from '../components/nativewindui/Button';
 import { CarModel, ModelItem } from '../components/model-item';

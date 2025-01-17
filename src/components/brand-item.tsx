@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
 import { Button } from './nativewindui/Button';
 import { useNavigation } from '@react-navigation/native';
 import { NavigationType } from '../@types/navigation';
