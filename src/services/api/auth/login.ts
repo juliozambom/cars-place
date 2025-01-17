@@ -17,7 +17,7 @@ export const LoginService = async ({ user, password }: ILoginService) => {
 
     const json = await response.json();
 
-    if (response.status != 200) {
+    if (response.status !== 200) {
       return [json, true];
     }
 
