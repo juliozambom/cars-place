@@ -1,5 +1,3 @@
-import { Button } from '@/src/components/nativewindui/Button';
-import { Text } from '@/src/components/nativewindui/Text';
 import { useState } from 'react';
 import {
   ActivityIndicator,
@@ -8,13 +6,20 @@ import {
   TextInput,
   View,
 } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Button } from '@/src/components/nativewindui/Button';
+import { Text } from '@/src/components/nativewindui/Text';
 import { LoginService } from '../services/api/auth/login';
 import { cn } from '../lib/cn';
+import { AsyncStorageUserKey } from '../lib/async-storage/keys';
+import { useAuth } from '../contexts/auth-context';
 
 export default function Login() {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
   const [isSigning, setIsSigning] = useState(false);
+
+  const { refreshUser } = useAuth();
 
   const handleLogin = async () => {
     if (!user) {
@@ -44,6 +49,11 @@ export default function Login() {
     }
 
     if (response && !err) {
+      await AsyncStorage.setItem(
+        AsyncStorageUserKey,
+        JSON.stringify(response.user)
+      );
+      await refreshUser();
     }
 
     setIsSigning(false);
